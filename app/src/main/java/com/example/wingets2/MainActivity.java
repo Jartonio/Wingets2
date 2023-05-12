@@ -3,14 +3,21 @@ package com.example.wingets2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.webkit.WebView;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.TextView;
+
+import java.nio.file.WatchEvent;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    int sexo = 1;
+    private int sexo = 1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +50,27 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+        Switch miSwich = findViewById(R.id.switch1);
+        miSwich.setText("RadioGroup activado");
+        miSwich.setChecked(true);
+
+        miSwich.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    miSwich.setText("RadioGroup activado");
+                    miRadioGroup.setVisibility(View.VISIBLE);
+                }else{
+                    miSwich.setText("RacioGrupop desactivado");
+                    miRadioGroup.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        WebView miWebView = findViewById(R.id.webView);
+        miWebView.loadUrl("https://www.google.es");
 
 
     }
