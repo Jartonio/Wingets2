@@ -26,17 +26,17 @@ public class MainActivity extends AppCompatActivity {
 
                 RadioButton pulsado = (RadioButton) findViewById(checkedId);
 
-                display.setText(pulsado.getText());
+                //display.setText(pulsado.getText());
 
                 switch (pulsado.getId()) {
                     case R.id.rb_hombre:
-                        Toast.makeText(MainActivity.this, "Hombre", Toast.LENGTH_SHORT).show();
+                        display.setText(pulsado.getText());
                         break;
                     case R.id.rb_mujer:
-                        Toast.makeText(MainActivity.this, "Mujer", Toast.LENGTH_SHORT).show();
+                        display.setText(pulsado.getText());
                         break;
                     case R.id.rb_LGTBI:
-                        Toast.makeText(MainActivity.this, "LGTBI", Toast.LENGTH_SHORT).show();
+                        display.setText(pulsado.getText());
                         break;
 
 
