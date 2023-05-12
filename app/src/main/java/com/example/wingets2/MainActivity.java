@@ -38,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.rb_LGTBI:
                         display.setText(pulsado.getText());
                         break;
-
-
                 }
 
                 }
